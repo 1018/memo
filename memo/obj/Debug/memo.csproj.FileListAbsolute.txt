@@ -1,0 +1,8 @@
+D:\nagase\WorkSpace\memo\memo\bin\Debug\memo.exe
+D:\nagase\WorkSpace\memo\memo\bin\Debug\memo.pdb
+D:\nagase\WorkSpace\memo\memo\obj\Debug\ResolveAssemblyReference.cache
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.Form1.resources
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.Properties.Resources.resources
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.csproj.GenerateResource.Cache
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.exe
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.pdb
