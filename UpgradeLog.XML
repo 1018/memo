@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="memo">
+</Property><Property Name="ソリューション ファイル" Value="C:\Users\neko\Documents\Visual Studio 2010\memoo\memo.sln">
+</Property><Property Name="Date" Value="2012年7月26日">
+</Property><Property Name="Time" Value="20:33">
+</Property></Properties><Event ErrorLevel="0" Project="memo" Source="memo\memo.csproj" Description="プロジェクトは正常に変換されました。">
+</Event><Event ErrorLevel="3" Project="memo" Source="memo\memo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="memo.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="memo.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="memo" Source="memo\memo.csproj" Description="スキャンが完了しました: プロジェクト ファイルにアップグレードは必要ありません。">
+</Event></UpgradeLog>
