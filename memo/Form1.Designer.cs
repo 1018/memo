@@ -35,11 +35,11 @@
             this.fileOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSave = new System.Windows.Forms.ToolStripMenuItem();
             this.fileNewSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileEnd = new System.Windows.Forms.ToolStripMenuItem();
             this.へんしゅうToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.しょしきOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ひょうじVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.へるぷHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileEnd = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDlg = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -60,6 +60,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(426, 273);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // menuStrip1
             // 
@@ -119,6 +120,14 @@
             this.fileNewSave.Text = "なまえをつけて!(&A)";
             this.fileNewSave.Click += new System.EventHandler(this.fileNewSave_Click);
             // 
+            // fileEnd
+            // 
+            this.fileEnd.Name = "fileEnd";
+            this.fileEnd.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.fileEnd.Size = new System.Drawing.Size(192, 22);
+            this.fileEnd.Text = "しゅうりょう(&X)";
+            this.fileEnd.Click += new System.EventHandler(this.fileEnd_Click);
+            // 
             // へんしゅうToolStripMenuItem
             // 
             this.へんしゅうToolStripMenuItem.Name = "へんしゅうToolStripMenuItem";
@@ -142,14 +151,6 @@
             this.へるぷHToolStripMenuItem.Name = "へるぷHToolStripMenuItem";
             this.へるぷHToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.へるぷHToolStripMenuItem.Text = "へるぷ(&H)";
-            // 
-            // fileEnd
-            // 
-            this.fileEnd.Name = "fileEnd";
-            this.fileEnd.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.fileEnd.Size = new System.Drawing.Size(192, 22);
-            this.fileEnd.Text = "しゅうりょう(&X)";
-            this.fileEnd.Click += new System.EventHandler(this.fileEnd_Click);
             // 
             // openFileDlg
             // 

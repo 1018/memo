@@ -117,12 +117,29 @@ namespace memo
         /// </summary>
         private void ShowSaveDateTime()
         {
-            const string STATUS_STRING = "に保存しといたよ";
+            const string STATUS_STRING = "に、もーが保存したよ＾＾";
             
             //ステータスバー上のラベルに表示
             toolStripStatusLabel1.Text = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + STATUS_STRING;
         }
 
+
+        /// <summary>
+        /// 上書き保存できるように
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //ダーティーフラグを設定
+            setDirty(true);
+        } 
+
+        /// <summary>
+        /// ﾌｧｲﾙ保存OKｸﾘｯｸ時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fileSave_Click(object sender, EventArgs e)
         {
             const string MSGBOX_TITLE = "うわがきするよ";
@@ -153,19 +170,7 @@ namespace memo
                      + "\" のパスは正しくありません。\n\nディレクトリが存在するか確認してください。";
                 MessageBox.Show(MSG_BOX_STRING, MSGBOX_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-
-
-        /// <summary>
-        /// 上書き保存できるように
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //ダーティーフラグを設定
-            setDirty(true);
-        }
+        } 
 
         /// <summary>
         /// 新規保存の場合
@@ -175,7 +180,7 @@ namespace memo
         private void fileNewSave_Click(object sender, EventArgs e)
         {
             //ファイルが新規作成だった場合の名前
-            const string NEW_FILE_NAME = "新規テキストファイル.txt";
+            const string NEW_FILE_NAME = "おりんぴっくがんばれー.txt";
 
             //編集中のファイルのフルパスからファイル名だけを取得
             string fileNameString = GetFileNameString(editFilePath, '\\');
@@ -233,14 +238,24 @@ namespace memo
 
         private void fileEnd_Click(object sender, EventArgs e)
         {
-            const string MSGBOX_TITLE = "りょこ帳の終了";
+            const string MSGBOX_TITLE = "も-帳の終了";
             if (confirmDestructionText(MSGBOX_TITLE))
             {
                 this.Close();
                 this.Dispose();
             }
-        } 
+        }
+
+
+
   
+
+
+
+
+
+
+
 
     }
 }
