@@ -34,9 +34,9 @@ namespace memo
             if (confirmDestructionText(MSG_BOX_TITLE))
             {
                 this.Text = "new file"; //アプリケーションのタイトルを変更
-                textBox1.Clear();　　　　　 //テキストボックスの内容をクリア
-                editFilePath = ""; 　         //編集中ファイルのパスをクリア
-                setDirty(false);               //ダーティーフラグと[上書き..]メニューを設定
+                textBox1.Clear();　　　 //テキストボックスの内容をクリア
+                editFilePath = ""; 　   //編集中ファイルのパスをクリア
+                setDirty(false);        //ダーティーフラグと[上書き..]メニューを設定
             }
         }
 
@@ -61,7 +61,7 @@ namespace memo
         /// <returns></returns>
         private bool confirmDestructionText(string msgboxTitle)
         {
-            const string MSG_BOX_STRING = "今のファイルはすてちゃうけど\n\nよかかにょ?";
+            const string MSG_BOX_STRING = "今のファイルはすてますよ。\n\nよかかにょ?";
             if (!dirtyFlag) return true;
             
             return (MessageBox.Show(MSG_BOX_STRING, msgboxTitle, 
@@ -128,6 +128,36 @@ namespace memo
 
 
         /// <summary>
+        /// 現在位置を表示する
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void visualStatus_Click(object sender, EventArgs e)
+        {
+            //文字列
+            string str = textBox1.Text;
+            //カレットの位置を取得
+            int selectPos = textBox1.SelectionStart;
+
+            //カレットの位置までの行を数える
+            int row = 1, startPos = 0;
+            for (int endPos = 0;
+                (endPos = str.IndexOf('\n', startPos)) < selectPos && endPos > -1;
+                row++)
+            {
+                startPos = endPos + 1;
+            }
+
+            //列の計算
+            int col = selectPos - startPos + 1;
+
+            //結果を表示
+            //            Console.WriteLine("行:{0} 列:{1}", row, col);
+            toolStripStatusLabel2.Text = "行:" + row + "列:" + col;
+
+        }
+
+        /// <summary>
         /// 上書き保存できるように
         /// </summary>
         /// <param name="sender"></param>
@@ -183,7 +213,7 @@ namespace memo
         private void fileNewSave_Click(object sender, EventArgs e)
         {
             //ファイルが新規作成だった場合の名前
-            const string NEW_FILE_NAME = "もーnew.txt";
+            const string NEW_FILE_NAME = "new.moo";
 
             //編集中のファイルのフルパスからファイル名だけを取得
             string fileNameString = GetFileNameString(editFilePath, '\\');
@@ -442,7 +472,7 @@ namespace memo
         private bool CheckFileType(string filePath)
         {
             //読み込みを許可するファイルの拡張子を指定 (app.config に定義した方が本当は便利)
-            string[] extnArray = { "txt", "cs", "vb", "htm", "html", "xml", "csv", "js", "vbs", "wsh","cpp","c" };
+            string[] extnArray = { "txt", "cs", "vb", "htm", "html", "xml", "csv", "js", "vbs", "wsh","cpp","c","moo" };
             foreach (string extn in extnArray)
             {
                 int dotLen = extn.Length;
@@ -467,17 +497,59 @@ namespace memo
                 //ドラッグされたデータを受け取らない
                 e.Effect = DragDropEffects.None;
             }
-
         }
 
-
+               
+                
         /// <summary>
         /// 論理行番号を表示する
         /// </summary>
         private void textBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-
+            //char[] eof = new char[] {'\r', '\n','[', 'E', 'O', 'F', ']'};
+            
             if (e.KeyCode == Keys.Enter)
+            {
+                if (this.textBox1.Lines.Length == 0)
+                {
+                    this.textBox3.AppendText((textBox1.Lines.Length + 1).ToString() + "\r\n");
+//                    textBox1.AppendText("[EOF]");
+                }
+                else
+                {
+                    this.textBox3.AppendText(textBox1.Lines.Length.ToString() + "\r\n");
+
+
+                    //for (int i = textBox1.Lines.Length - 1; i >= 0; i--)
+                    //{
+                    //    if (this.textBox1.Lines[i].Equals("[EOF]"))
+                    //    {
+                    //        //                            textBox1.Lines[i].Replace("[EOF]", "");
+                    //        this.textBox1.Lines[i].Remove(0, 1);
+                    //        break;
+                    //    }
+
+                    //}
+                    //textBox1.AppendText("[EOF]");
+                    
+                    
+        
+
+
+                }
+
+            }
+
+        }
+
+        /// <summary>
+        /// 矢印ｷｰでの移動抑制
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
             {
                 //文字列
                 string str = textBox1.Text;
@@ -485,19 +557,25 @@ namespace memo
                 int selectPos = textBox1.SelectionStart;
 
                 //カレットの位置までの行を数える
-                int row = 1, startPos = 0;
+                int row = 0, startPos = 0;
                 for (int endPos = 0;
-                    (endPos = str.IndexOf('\n', startPos)) < selectPos && endPos > -1;
+                    (endPos = str.IndexOf("\r\n", startPos)) < selectPos && endPos > -1;
                     row++)
                 {
                     startPos = endPos + 1;
-                }               
- 
-                this.textBox3.AppendText(row.ToString() + "\r\n");                   
+                }
 
+                if (row == textBox1.Lines.Length)
+                {
+                    e.Handled = true;
+                }               
+                
             }
 
         }
+
+
+ 
 
 
 

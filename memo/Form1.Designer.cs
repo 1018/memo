@@ -55,7 +55,7 @@
             this.transparencyTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ひょうじVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.すてーたすばーToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.へるぷHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.へるぷHToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ばーじょんVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +63,7 @@
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
@@ -89,6 +90,7 @@
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox1_DragDrop);
             this.textBox1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.textBox1_PreviewKeyDown);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
             // 
             // menuStrip1
@@ -302,16 +304,17 @@
             // ひょうじVToolStripMenuItem
             // 
             this.ひょうじVToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.すてーたすばーToolStripMenuItem});
+            this.visualStatus});
             this.ひょうじVToolStripMenuItem.Name = "ひょうじVToolStripMenuItem";
             this.ひょうじVToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.ひょうじVToolStripMenuItem.Text = "Visual(&V)";
             // 
-            // すてーたすばーToolStripMenuItem
+            // visualStatus
             // 
-            this.すてーたすばーToolStripMenuItem.Name = "すてーたすばーToolStripMenuItem";
-            this.すてーたすばーToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.すてーたすばーToolStripMenuItem.Text = "status(&S)";
+            this.visualStatus.Name = "visualStatus";
+            this.visualStatus.Size = new System.Drawing.Size(152, 22);
+            this.visualStatus.Text = "status(&S)";
+            this.visualStatus.Click += new System.EventHandler(this.visualStatus_Click);
             // 
             // へるぷHToolStripMenuItem
             // 
@@ -348,7 +351,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 300);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(570, 22);
@@ -359,6 +363,11 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 17);
             // 
             // textBox3
             // 
@@ -374,7 +383,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(32, 259);
             this.textBox3.TabIndex = 4;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox3.WordWrap = false;
             // 
             // textBox2
@@ -444,7 +453,7 @@
         private System.Windows.Forms.ToolStripMenuItem editJump;
         private System.Windows.Forms.ToolStripMenuItem editAllSelect;
         private System.Windows.Forms.ToolStripMenuItem editDate;
-        private System.Windows.Forms.ToolStripMenuItem すてーたすばーToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualStatus;
         private System.Windows.Forms.ToolStripMenuItem へるぷHToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ばーじょんVToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editCopy;
@@ -456,6 +465,7 @@
         private System.Windows.Forms.ToolStripMenuItem settingSToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
 
