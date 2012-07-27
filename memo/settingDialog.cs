@@ -11,9 +11,6 @@ namespace memo
         //処理対象となる TextBox のインスタンスを保持
         private TextBox _textBox;
 
-
-
-
         public settingDialog()
         {
             InitializeComponent();
@@ -24,11 +21,9 @@ namespace memo
             InitializeComponent();
             _textBox = txtBox;
         }
+        
 
-
-
-
-#region property //プロパティ
+#region property 
 
         //処理対象となる TextBox のインスタンス設定するためのプロパティ
         public TextBox textBox
@@ -36,6 +31,7 @@ namespace memo
             get { return _textBox; }
             set { _textBox = value; }
         }
+
 #endregion
 
 

@@ -61,7 +61,7 @@ namespace memo
         /// <returns></returns>
         private bool confirmDestructionText(string msgboxTitle)
         {
-            const string MSG_BOX_STRING = "ファイルは保存してないよ。\n\n編集中のファイルはすてちゃうけど。\n\nよかかにょ?";
+            const string MSG_BOX_STRING = "今のファイルはすてちゃうけど\n\nよかかにょ?";
             if (!dirtyFlag) return true;
             
             return (MessageBox.Show(MSG_BOX_STRING, msgboxTitle, 
@@ -344,6 +344,8 @@ namespace memo
                 this.Top = Properties.Settings.Default.Top;
                 this.Left = Properties.Settings.Default.Left;
                 textBox1.Font = Properties.Settings.Default.Font;
+                textBox3.Font = Properties.Settings.Default.Font;
+
                 textBox1.BackColor = Properties.Settings.Default.BackGroundColor;
                 textBox1.ForeColor = Properties.Settings.Default.ForeColor;
                 bool wWrapFlg = Properties.Settings.Default.WordWrap;
@@ -467,6 +469,39 @@ namespace memo
             }
 
         }
+
+
+        /// <summary>
+        /// 論理行番号を表示する
+        /// </summary>
+        private void textBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                //文字列
+                string str = textBox1.Text;
+                //カレットの位置を取得
+                int selectPos = textBox1.SelectionStart;
+
+                //カレットの位置までの行を数える
+                int row = 1, startPos = 0;
+                for (int endPos = 0;
+                    (endPos = str.IndexOf('\n', startPos)) < selectPos && endPos > -1;
+                    row++)
+                {
+                    startPos = endPos + 1;
+                }               
+ 
+                this.textBox3.AppendText(row.ToString() + "\r\n");                   
+
+            }
+
+        }
+
+
+
+
 
 
 

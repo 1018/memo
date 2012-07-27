@@ -52,6 +52,8 @@
             this.formatWordWrap = new System.Windows.Forms.ToolStripMenuItem();
             this.つーるTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolOption = new System.Windows.Forms.ToolStripMenuItem();
+            this.transparencyTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ひょうじVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.すてーたすばーToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.へるぷHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,11 +63,8 @@
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.transparencyTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -78,15 +77,18 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.Font = new System.Drawing.Font("あずきフォント", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox1.Location = new System.Drawing.Point(32, 40);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(540, 283);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox1_DragDrop);
+            this.textBox1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.textBox1_PreviewKeyDown);
             this.textBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
             // 
             // menuStrip1
@@ -263,7 +265,7 @@
             // formatWordWrap
             // 
             this.formatWordWrap.Name = "formatWordWrap";
-            this.formatWordWrap.Size = new System.Drawing.Size(152, 22);
+            this.formatWordWrap.Size = new System.Drawing.Size(139, 22);
             this.formatWordWrap.Text = "wrap word(&W)";
             this.formatWordWrap.Click += new System.EventHandler(this.formatWordWrap_Click);
             // 
@@ -285,6 +287,18 @@
             this.toolOption.Text = "option(&O)";
             this.toolOption.Click += new System.EventHandler(this.toolOption_Click);
             // 
+            // transparencyTToolStripMenuItem
+            // 
+            this.transparencyTToolStripMenuItem.Name = "transparencyTToolStripMenuItem";
+            this.transparencyTToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.transparencyTToolStripMenuItem.Text = "transparency(&T)";
+            // 
+            // settingSToolStripMenuItem
+            // 
+            this.settingSToolStripMenuItem.Name = "settingSToolStripMenuItem";
+            this.settingSToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.settingSToolStripMenuItem.Text = "setting(&S)";
+            // 
             // ひょうじVToolStripMenuItem
             // 
             this.ひょうじVToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -296,7 +310,7 @@
             // すてーたすばーToolStripMenuItem
             // 
             this.すてーたすばーToolStripMenuItem.Name = "すてーたすばーToolStripMenuItem";
-            this.すてーたすばーToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.すてーたすばーToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.すてーたすばーToolStripMenuItem.Text = "status(&S)";
             // 
             // へるぷHToolStripMenuItem
@@ -311,13 +325,13 @@
             // へるぷHToolStripMenuItem1
             // 
             this.へるぷHToolStripMenuItem1.Name = "へるぷHToolStripMenuItem1";
-            this.へるぷHToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.へるぷHToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
             this.へるぷHToolStripMenuItem1.Text = "help(&H)";
             // 
             // ばーじょんVToolStripMenuItem
             // 
             this.ばーじょんVToolStripMenuItem.Name = "ばーじょんVToolStripMenuItem";
-            this.ばーじょんVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ばーじょんVToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.ばーじょんVToolStripMenuItem.Text = "about(&V)";
             // 
             // openFileDlg
@@ -334,8 +348,7 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripProgressBar1});
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 300);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(570, 22);
@@ -347,66 +360,49 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
-            // 
-            // transparencyTToolStripMenuItem
-            // 
-            this.transparencyTToolStripMenuItem.Name = "transparencyTToolStripMenuItem";
-            this.transparencyTToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.transparencyTToolStripMenuItem.Text = "transparency(&T)";
-            // 
-            // settingSToolStripMenuItem
-            // 
-            this.settingSToolStripMenuItem.Name = "settingSToolStripMenuItem";
-            this.settingSToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.settingSToolStripMenuItem.Text = "setting(&S)";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.DimGray;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox2.Location = new System.Drawing.Point(0, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(572, 19);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "  ....+....0....+....1....+....2....+....3....+....4....+....5....+....6....+...." +
-                "7....+....8....+....9.........+.........+.........+.........+.........+........." +
-                "+.........+";
-            // 
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox3.BackColor = System.Drawing.Color.DimGray;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox3.Location = new System.Drawing.Point(0, 24);
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.textBox3.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.textBox3.Location = new System.Drawing.Point(0, 41);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(34, 276);
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(32, 259);
             this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "           1";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox3.WordWrap = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BackColor = System.Drawing.Color.DimGray;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("あずきフォント", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.textBox2.Location = new System.Drawing.Point(32, 24);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(540, 12);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.Text = resources.GetString("textBox2.Text");
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(570, 322);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.textBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -451,7 +447,6 @@
         private System.Windows.Forms.ToolStripMenuItem すてーたすばーToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem へるぷHToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ばーじょんVToolStripMenuItem;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripMenuItem editCopy;
         private System.Windows.Forms.ToolStripMenuItem editPaste;
         private System.Windows.Forms.ToolStripMenuItem つーるTToolStripMenuItem;
@@ -459,8 +454,8 @@
         private System.Windows.Forms.ToolStripMenuItem formatWordWrap;
         private System.Windows.Forms.ToolStripMenuItem transparencyTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingSToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
