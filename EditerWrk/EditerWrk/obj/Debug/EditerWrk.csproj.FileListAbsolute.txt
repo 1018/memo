@@ -1,0 +1,31 @@
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\bin\Debug\EditerWrk.exe
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\bin\Debug\EditerWrk.pdb
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\obj\Debug\EditerWrk.csproj.GenerateResource.Cache
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\obj\Debug\EditerWrk.exe
+C:\Documents and Settings\omonoe\My Documents\Visual Studio 2008\Projects\EditerWrk\EditerWrk\obj\Debug\EditerWrk.pdb
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\EditerWrk.exe
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\EditerWrk.pdb
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\bin\Debug\EditerWrk.exe
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\bin\Debug\EditerWrk.pdb
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.findDialog.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\EditerWrk.csproj.GenerateResource.Cache
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\bin\Debug\EditerWrk.exe.config
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.jumpDialog.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.settingDialog.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\EditerWrk.exe
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\EditerWrk.pdb
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\bin\Debug\EditerWrk.exe
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\bin\Debug\EditerWrk.pdb
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.findDialog.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.jumpDialog.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\obj\Debug\EditerWrk.csproj.GenerateResource.Cache
+C:\Users\osamum.FAREAST\Documents\Job\セミナー\builderブログ\BK\Plane\EditerWrk\EditerWrk\bin\Debug\EditerWrk.exe.config

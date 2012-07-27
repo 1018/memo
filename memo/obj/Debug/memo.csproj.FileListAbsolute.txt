@@ -6,3 +6,30 @@ D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.Properties.Resources.resources
 D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.csproj.GenerateResource.Cache
 D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.exe
 D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.pdb
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\memo.exe
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\memo.pdb
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\bin\Debug\memo.exe
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\bin\Debug\memo.pdb
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\memo.Form1.resources
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\memo.Properties.Resources.resources
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\ResGen.read.1.tlog
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\ResGen.write.1.tlog
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\memo.findDialog.resources
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\obj\Debug\memo.jumpDialog.resources
+C:\Users\neko\Documents\Visual Studio 2010\memoo\memo\bin\Debug\memo.exe.config
+D:\nagase\1018-memo-76cd138\memo\bin\Debug\memo.exe.config
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\memo.exe
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\memo.pdb
+D:\nagase\1018-memo-76cd138\memo\bin\Debug\memo.exe
+D:\nagase\1018-memo-76cd138\memo\bin\Debug\memo.pdb
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\ResolveAssemblyReference.cache
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\memo.findDialog.resources
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\memo.Form1.resources
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\memo.jumpDialog.resources
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\memo.Properties.Resources.resources
+D:\nagase\1018-memo-76cd138\memo\obj\Debug\memo.csproj.GenerateResource.Cache
+D:\nagase\WorkSpace\memo\memo\bin\Debug\memo.exe.config
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.findDialog.resources
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.jumpDialog.resources
+D:\nagase\WorkSpace\memo\memo\obj\Debug\memo.settingDialog.resources
